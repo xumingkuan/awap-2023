@@ -77,3 +77,5 @@ The spawn locations for terraformers are random.
 
 ## Implementation tricks
 We keep track of the whole map on our own after calling `game_state.get_info()` for one time each turn. This is because the function `game_state.get_info()` is rather expensive.
+
+Because time out is automatically losing, we simply do nothing when there are less than 5 seconds left (and we hope this will never happen).
